@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   overflow: hidden; 
+  overflow: hidden; 
 }
 
 p {
@@ -81,14 +81,12 @@ h1 {
   position: relative;
   right: -90%;
   top:-6rem;
-  
 }
 
 .app .description {
   position: relative;
   right: -90%;
   top:-5rem;
-  
 }
 
 .app .bottom {
@@ -108,9 +106,56 @@ h1 {
   font-weight: 700;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
 
+  .container {
+    height: 65vh; /* Adjust height for smaller screens */
+    top: 10%; /* Slightly adjust vertical positioning */
+  }
 
+  .app .weathername, .app .description {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-bottom: 1rem; /* Add spacing to avoid overlapping */
+  }
 
+  .app .bottom {
+    padding: 2rem; /* Adjust padding for smaller screens */
+  }
 
+  p {
+    font-size: 1.4rem; /* Slightly smaller font size */
+  }
 
+  .app input {
+    font-size: 1rem; /* Adjust font size for input field */
+  }
+}
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .container {
+    height: 55vh; /* Further adjust height */
+    top: 15%; /* Center content more appropriately */
+  }
+
+  .app .bottom {
+    padding: 1.5rem; /* Further adjust padding */
+  }
+
+  p {
+    font-size: 1.2rem; /* Further reduce font size */
+  }
+
+  .app input {
+    font-size: 0.9rem; /* Adjust font size for input field */
+  }
+}
