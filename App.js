@@ -30,7 +30,7 @@ function App() {
         <Typography variant="h4" gutterBottom>
           Welcome to FindWeather
         </Typography>
-        <WeatherWidget city="London" /> {/* Example city */}
+        <WeatherWidget city="Hyderabad" /> {/* Example city */}
       </Box>
     </Box>
   );
