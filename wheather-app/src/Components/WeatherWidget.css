@@ -1,0 +1,127 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .weather-box {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  .weather-box:hover {
+    transform: scale(1.05);
+    background-color: rgba(50, 50, 50, 0.8);
+    
+  }
+  
+  .weather-app-title {
+    font-size: 2rem; /* Title size */
+    color: #cc1414; /* Title color */
+    margin-bottom: 20px; /* Space below the title */
+    text-transform: uppercase;
+    border: 2px solid #cc1414; /* Text border color */
+    padding: 10px;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  
+  .weather-app-title:hover {
+    color: #FFD700; /* Change color on hover */
+    border-color: #FFD700; /* Change border color on hover */
+  }
+  
+  .city-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+  }
+  
+  .city-name {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00BFFF; /* Deep Sky Blue */
+  }
+  
+  .city-name img {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+  }
+  
+  .temperature {
+    font-size: 2.5rem; /* Decrease font size */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #FF4500; /* Orange Red */
+  }
+  
+  .weather-description {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    color: #ADFF2F; /* Green Yellow */
+  }
+  
+  .weather-icon {
+    width: 100px; /* Adjust icon size */
+    height: 100px;
+    color: antiquewhite;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 480px) {
+    .weather-box {
+      padding: 20px;
+    }
+  
+    .weather-app-title {
+      font-size: 1.8rem; /* Adjust title size */
+    }
+  
+    .city-name {
+      font-size: 1.8rem;
+    }
+  
+    .temperature {
+      font-size: 2rem; /* Adjust font size */
+    }
+  
+    .weather-description {
+      font-size: 1.4rem;
+    }
+  
+    .weather-icon {
+      width: 80px; /* Adjust icon size */
+      height: 80px;
+    }
+  }
+  
