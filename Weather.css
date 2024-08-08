@@ -1,0 +1,159 @@
+/* src/components/WeatherWidget.css */
+
+/* Base styles for the weather widget */
+.weather-widget {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    padding: 25px;
+    max-width: 420px;
+    margin: 60px auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .weather-widget:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Cloud animation */
+  @keyframes moveClouds {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cloudy-day.png') repeat-x;
+    opacity: 0.2;
+    animation: moveClouds 60s linear infinite;
+    z-index: -1;
+  }
+  
+  /* Input and form styles */
+  .city-form {
+    margin-bottom: 25px;
+  }
+  
+  .city-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease;
+  }
+  
+  .city-input:focus {
+    border-color: grey;
+    outline: none;
+  }
+  
+  .loading, .error {
+    color: #e76f51;
+    font-size: 1.3rem;
+    margin-top: 25px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .weather-info {
+    margin-top: 25px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .city-name {
+    font-size: 1.7rem;
+    color: #264653;
+    margin-bottom: 10px;
+  }
+  
+  .weather-description {
+    font-size: 1.3rem;
+    color: grey;
+    text-transform: capitalize;
+  }
+  
+  .temperature {
+    font-size: 1.5rem;
+    color: #e76f51;
+    margin-top: 15px;
+  }
+  
+  .weather-icon {
+    margin-top: 25px;
+    width: 85px;
+    height: 85px;
+    filter: drop-shadow(0 4px 6px rgba(238, 241, 241, 0.1));
+    transition: transform 0.3s ease;
+  }
+  
+  .weather-icon:hover {
+    transform: rotate(10deg) scale(1.1);
+  }
+  
+  /* Keyframes for fadeIn animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .weather-widget {
+      padding: 20px;
+      max-width: 95%;
+      margin: 30px auto;
+    }
+  
+    .city-name {
+      font-size: 1.4rem;
+    }
+  
+    .weather-description, .temperature {
+      font-size: 1.1rem;
+    }
+  
+    .weather-icon {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .weather-widget {
+      padding: 15px;
+      margin: 20px auto;
+    }
+  
+    .city-name {
+      font-size: 1.2rem;
+    }
+  
+    .weather-description, .temperature {
+      font-size: 1rem;
+    }
+  
+    .weather-icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
