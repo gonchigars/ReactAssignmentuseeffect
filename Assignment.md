@@ -11,7 +11,7 @@
 2. In the following code snippet, what does setCount do?
    ```javascript
    const [count, setCount] = useState(0);
-   ```
+   ``` 
    a) It initializes the count state
    b) It returns the current count value
    c) It's a function to update the count state
@@ -89,7 +89,7 @@ Create a React component called `WeatherWidget` that fetches and displays the cu
 5. Display the temperature, weather description, and an icon representing the weather condition.
 
 Bonus: Add a simple form that allows users to change the city, and ensure the weather data updates accordingly.
-
+ 
 Note: This should the JSX.
 ```
 return (
