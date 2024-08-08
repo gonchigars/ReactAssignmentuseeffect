@@ -1,0 +1,37 @@
+.weather-api {
+  text-align: center;
+  margin: 20px;
+}
+
+.weather-api form {
+  margin-bottom: 20px;
+}
+
+.weather-api input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.weather-api .loading {
+  font-size: 18px;
+  color: #666;
+}
+
+.weather-api .error {
+  font-size: 18px;
+  color: red;
+}
+
+.weather-api .weather-info {
+  font-size: 18px;
+}
+
+.weather-api img {
+  width: 100px;
+  height: auto;
+}
+
+
+
