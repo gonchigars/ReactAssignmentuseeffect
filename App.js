@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { Box, CssBaseline, Typography } from '@mui/material';
-import ButtonAppBar from '../../ReactAssignmentuseeffect/components/AppBar';  
-import Sidebar from '../../ReactAssignmentuseeffect/components/Sidebar'; 
-import WeatherWidget from '../../ReactAssignmentuseeffect/components/WeatherWidget'; 
+import { Box, CssBaseline, Typography, TextField, Button } from '@mui/material';
+import ButtonAppBar from './components/AppBar';
+import Sidebar from './components/Sidebar'; 
+import WeatherWidget from './components/WeatherWidget'; 
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [city, setCity] = useState('Hyderabad'); 
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+  };
+
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
   };
 
   return (
@@ -30,7 +35,13 @@ function App() {
         <Typography variant="h4" gutterBottom>
           Welcome to FindWeather
         </Typography>
-        <WeatherWidget city="Hyderabad" /> {/* Example city */}
+        <TextField
+          label="City"
+          value={city}
+          onChange={handleCityChange}
+        />
+        <Button onClick={() => setCity(city)}>Search</Button>
+        <WeatherWidget city={city} />
       </Box>
     </Box>
   );
