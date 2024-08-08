@@ -1,0 +1,90 @@
+ /* src/App.css */
+
+/* The main container that centers content vertically and horizontally */
+.App {
+  text-align: center;
+  background-color: #f0f8ff;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: Top; /* Center content vertically */
+  align-items: Top; /* Center content horizontally */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style for the header, ensuring it spans the full width */
+.App-header {
+  background-color: #12d0dd;
+  color: white;
+  padding: 1em;
+  width: 100%; /* Make header full width */
+}
+
+/* Container for the main content */
+.container {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items inside container */
+}
+
+/* Style for the weather card */
+.weather-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for headings inside the weather card */
+.weather-card h2 {
+  margin: 0;
+}
+
+/* Style for paragraphs inside the weather card */
+.weather-card p {
+  margin: 0.5em 0;
+}
+
+/* Style for error messages */
+.error {
+  color: red;
+}
+
+/* Fixed footer styling */
+.App-footer {
+  background-color: #4682b4;
+  color: white;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Ensure footer spans the full width */
+}
+
+/* Style for input fields */
+input {
+  padding: 0.5cm;
+  margin: 0.3cm;
+  border-radius: 2px;
+  border: 1px solid #220101;
+  width: 400px;
+  font-size: 20px;
+}
+
+/* Style for buttons */
+button {
+  padding: 0.8em 3em;
+  border: none;
+  border-radius: 8px;
+  background-color: #464db4;
+  color: white;
+  cursor: pointer;
+  margin: 20px;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #4144e1;
+}
